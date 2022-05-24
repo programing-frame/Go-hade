@@ -1,5 +1,10 @@
 package main
 
-func routeHandler() {
+import (
+	"github.com/Go-hade/coredemo/framework"
+)
 
+func registerRouter(core *framework.Core) {
+	// core.Get("foo", framework.TimeoutHandler(FooControllerHandler, time.Second*1))
+	core.Get("foo", FooControllerHandler)
 }
